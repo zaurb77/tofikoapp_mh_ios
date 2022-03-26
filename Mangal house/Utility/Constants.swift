@@ -1,0 +1,382 @@
+//
+//  Constants.swift
+
+import Foundation
+import UIKit
+
+struct AppColors {
+    static let golden = UIColor(red: CGFloat(212/255.0), green: CGFloat(172/255.0), blue: CGFloat(92/255.0), alpha: 1.0)
+    static let yellow = UIColor(red: CGFloat(255/255.0), green: CGFloat(255/255.0), blue: CGFloat(153/255.0), alpha: 1.0)
+}
+
+public class Helper {
+    public class var isIpad:Bool {
+        if #available(iOS 8.0, *) {
+            return UIScreen.main.traitCollection.userInterfaceIdiom == .pad
+        } else {
+            return UIDevice.current.userInterfaceIdiom == .pad
+        }
+    }
+    public class var isIphone:Bool {
+        if #available(iOS 8.0, *) {
+            return UIScreen.main.traitCollection.userInterfaceIdiom == .phone
+        } else {
+            return UIDevice.current.userInterfaceIdiom == .phone
+        }
+    }
+}
+
+struct Fonts {
+    static func Regular(fontSize: CGFloat) -> UIFont {
+        return UIFont(name: "Arial-Regular", size: fontSize)!
+    }
+}
+
+
+
+struct ScreenSize {
+    static let SCREEN_WIDTH         = UIScreen.main.bounds.size.width
+    static let SCREEN_HEIGHT        = UIScreen.main.bounds.size.height
+    static let SCREEN_MAX_LENGTH    = max(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
+    static let SCREEN_MIN_LENGTH    = min(ScreenSize.SCREEN_WIDTH, ScreenSize.SCREEN_HEIGHT)
+}
+
+class Constant {
+    static var WEBURL="https://tofiko.com/webservices/customer/"
+    static var APP_STORE_LINK = "https://apps.apple.com/us/app/mangal-house/id1493326708"
+    static var PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=com.mangalhouse"
+    static var APP_ID = "1493326708"
+    static var GOOGLE_MAP_API = ""
+    static var PROJECT_NAME = "Mangal House" as NSString
+    static var defaults = UserDefaults.standard
+    
+    struct API {
+        static var LOGIN = "login.php"
+        static var CHECK_USER_EXISTS = "check_user_exists.php"
+        static var REGISTER = "user_register.php"
+        static var LOGOUT = "logout.php"
+        static var FORGOT_PASSWORD = "forgot_password.php"
+        static var VERIFY_OTP = "verify_otp.php"
+        static var RESET_PASSWORD = "reset_password.php"
+        static var STATIC = "static_page.php"
+        static var CHANGE_PROFILE = "change_user_profile.php"
+        static var UPDATE_PUSH_CNT = "update_push_counter.php"
+        
+        static var SHARE_POINTS = "share_points.php"
+        static var GET_APP_SETTINGS = "get_app_settings.php"
+        static var OFFER_LIST = "offer_list.php"
+        static var CHANGE_NOTIFICATION_STATUS = "notification_status.php"
+        static var CONTACT_QUE = "contact_questions.php"
+        static var CONTACT_US = "contact.php"
+        static var ABOUT_US = "get_about_us_detail.php"
+        
+        static var RESTAURANT_LIST = "restaurant_list.php"
+        static var ADD_TO_CART = "add_to_cart.php"
+        static var GET_NEAREST_RESTAURANT = "get_nearest_restaurant.php"
+        
+        static var GET_ADDRESS_LIST = "address_list.php"
+        static var ADDRESS = "address.php"
+        static var SET_GET_DELIVERY_ADDRESS = "get_delivery_address.php"
+        
+        static var CART_ITEMS = "cart_items.php"
+        static var CHANGE_QTY = "change_quantity.php"
+        
+        static var RESTAURANT_CATEGORY = "restaurant_category.php"
+        static var RESTAURANT_MENU_ITEMS = "restaurant_menu_items.php"
+        static var ITEM_DETAILS = "item_details.php"
+        static var CART_CUSTOMIZATION_ITEMS = "cart_customization_items.php"
+        
+        static var ORDER_HISTORY = "order_history.php"
+        static var ORDER_DETAIL = "order_details.php"
+        static var ORDER_RATING = "add_order_rating.php"
+        static var REPEAT_ORDER = "reorder.php"
+        
+        static var CARD_LIST = "card_list.php"
+        static var ADD_CARD = "add_card.php"
+        static var CHECKOUT = "checkout.php"
+        static var CHANGE_COMPANY = "change_user_company.php"
+        
+        static var GET_RESTAURANT_LIST = "restaurant_list.php"
+                
+        static var LANGUAGE_LIST = "languages.php"
+        static var SET_LANGUAGE = "set_app_language.php"
+        static var GET_LANGUAGE = "get_lang_keyword.php"
+        
+        static var NOTIFICATION_LIST = "notifications.php"
+        
+        static var RESERVATION_STORE_LIST = "store_list.php"
+        static var RESERVATION_STORE_DETAIL = "store_detail.php"
+        static var GET_SLOT_BY_DATE = "get_slots_by_date.php"
+        static var BOOK_TABLE = "book_table.php"
+        static var GET_BOOKING = "get_table_booking_list.php"
+        static var CANCEL_RESERVED_BOOKING = "cancel_booking.php"
+        
+    }
+}
+
+class Language {
+        
+    static var LOGIN = "Login"
+    static var EMAIL_ADDRESS = "Email Address"
+    static var PASSWORD = "Password"
+    static var FORGOT_PASS = "Forgot password?"
+    static var OR = "Or"
+    static var REGISTER = "Register"
+    static var WITHOUT_LOGIN = "Continue without loggin in"
+    static var SIGN_AGREEMENT = "By signing in your agree with our"
+    static var TERMS_AND_CONDITIONS = "Terms & Conditions"
+    static var AND = "and"
+    static var PRIVACY_POLICY = "Privacy Policy"
+    static var SUBMIT = "Submit"
+    static var SECURITY_CODE = "Security Code"
+    static var SECURITY_CODE_MSG = "A security code was sent to:"
+    static var NEXT = "Next"
+    static var SET_PASSWORD = "Set Password"
+    static var NEW_PASS = "New Password"
+    static var CONFIRM_PASS = "Confirm Password"
+    static var SAVE = "Save"
+    static var FNAME = "First Name"
+    static var LNAME = "Last Name"
+    static var PHONE_NUMBER = "Cellular Phone Number"
+    static var REFERRAL_CODE = "Rederral Code (Optional)"
+    static var ALREADY_LOGIN = "Already have an account? Login"
+    static var SELECT_COUNTRY = "Select a Country"
+    static var GALLERY = "Gallery"
+    static var CAMERA = "Camera"
+    static var CANCEL = "Cancel"
+    static var PROVIDE_PROFILE_IMG = "Please select profile image"
+    static var ACCEPT_TERMS_CONDITIONS = "Accept Terms & Conditions"
+    static var I_AGREE = "I agree to the terms and condition"
+    static var ADD = "Add"
+    static var ORDER_FROM_MENU = "ORDER FROM MENU"
+    static var INVITE_FRIENDS_LABEL = "INVITE FRIENDS"
+    static var MY_ORDER_HISTORY = "MY ORDER HISTORY"
+    static var SPECIAL_OFFERS = "SPECIAL OFFERS"
+    static var WHERE_WE_ARE = "WHERE WE ARE"
+    static var ABOUT_US = "ABOUT US"
+    static var MY_ACCOUNT = "MY ACCOUNT"
+    static var REPLACE_CART_ITEM = "Replace Cart Item?"
+    static var CART_CONTAINS_FROM = "Your cart contains dishes from"
+    static var DISCARD_SELECTION = "Do you want to discard selection and add dishes from this store."
+    static var YES_LABEL = "Yes"
+    static var NO_LABEL = "No"
+    static var HOME = "HOME"
+    static var MY_CART = "MY CART"
+    static var ORDER_HISTORY = "ORDER HISTORY"
+    static var CUSTOMER_SERVICE = "CUSTOMER SERVICE"
+    static var SETTING = "SETTING"
+    static var SHARE_AND_EARN = "SHARE & EARN"
+    static var LOGOUT = "LOGOUT"
+    static var LOGOUT_CONFIRM = "Are you sure you want to logout?"
+    static var MY_MANGALS = "MY MANGALS"
+    static var MY_MANGAL_POINT = "My Mangal Points"
+    static var AVAILABLE_OFFERS = "Available Offers"
+    static var FROM = "FROM"
+    static var VERSION = "Version"
+    static var CONTINUE = "CONTINUE"
+    static var SELECT_LANGUAGE = "Select Language"
+    static var EDIT_PROFILE = "EDIT PROFILE"
+    static var PUSH_NOTIFICATION = "PUSH NOTIFICATION"
+    static var LANGUAGE = "LANGUAGE"
+    static var COOKIES = "COOKIES"
+    static var ORDER_NOTIFICATION = "ORDER NOTIFICATION"
+    static var NEWS_AND_OFFERS = "NEWS AND OFFERS"
+    static var EMAIL_NOTIFICATION = "Email Notification"
+    static var COOKIE_POLICY = "Cookie Policy"
+    static var CONTACT_SUPPORT = "CONTACT SUPPORT"
+    static var STILL_QUESTIONS = "STILL HAVE A QUESTIONS? CONTACT US"
+    static var NAME = "Name"
+    static var MOBILE_NUMBER = "Mobile Number"
+    static var MESSAGE = "Message"
+    static var LIKE_MANGAL = "Like Mangal House?"
+    static var SHARE_WITH_FRIENDS = "Share with your friends!"
+    static var INVITE_DESCRIPTION = "Invite your friends to Mangal House and they will get welcome points by registering account in app. Once they register, you will get 50 points too. Your friends will get 25 points."
+    static var SHARE_CODE = "Share your code"
+    static var FACEBOOK_INSTALL = "Facebook app is not installed."
+    static var INSTALL_INSTA_APP = "Please install instagram app"
+    static var DOB = "Date of Birth"
+    static var GENDER = "Gender"
+    static var MALE = "Male"
+    static var FEMALE = "Female"
+    static var UPDATE = "Update"
+    static var COMPANY_NAME = "Company Name"
+    static var VAT_ID = "Vat id"
+    static var LEGAL_EMAIL = "Legal Email"
+    static var UNIQUE_INVOICE_CODE = "Unique Invoice Code"
+    static var DELIVERY = "Delivery"
+    static var TAKEAWAY_FROM_STORE = "Take away from store"
+    static var WOOPS = "Woops!"
+    static var SELECT_ANOTHER_ADDRESS = "Select another Address"
+    static var ADDRESS = "ADDRESS"
+    static var ADDRESS_LINE_2 = "ADDRESS Line 2"
+    static var DELIVERY_ADDRESS = "Please select delivery address."
+    static var ADDRESS_ERROR = "You have not added any address"
+    static var WORK = "Work"
+    static var OTHER = "Other"
+    static var DOOR_NO = "Door number"
+    static var CITY = "City"
+    static var ZIPCODE = "Zip Code"
+    static var COUNTRY = "Country"
+    static var SEARCH_PRODUCT = "Search by products"
+    static var NO_ITEM_ERROR = "This item not available for order"
+    static var CUSTOMIZABLE = "Customizable"
+    static var TOTAL = "Total"
+    static var CATEGORY_NOT_FOUND = "Category Not Found!"
+    static var RES_CATEGORY_NOT_AVAILABLE = "Restaurant category not available"
+    static var INGREDIENTS = "Ingredients"
+    static var ALLERGENS = "Allergens"
+    static var DESCRIPTION = "Description"
+    static var ITEM_CUSTOMIZATION = "ITEM CUSTOMIZATION"
+    static var APPLY_CHANGES = "APPLY CHANGES"
+    static var CHOOSE_TEST = "CHOOSE YOUR TEST ADD ON"
+    static var ADD_EXTRA = "ADD EXTRAS"
+    static var WANT_TO_REMOVE = "WANT TO REMOVE SOMETHING"
+    static var PAY_WITH_MANGAL = "Pay with mangal"
+    static var ITEM_TOTAL = "Item Total"
+    static var DELIVERY_CHARGE = "Delivery Charge"
+    static var TOTAL_PAYABLE_AMT = "Total Payable Amount"
+    static var ORDER_TYPE = "Order Type"
+    static var TAKEAWAY = "Takeway"
+    static var CHANGE_ADDRESS = "CHANGE ADDRESS"
+    static var ADD_CUTLERY = "Do you want to add cutlery along with order?"
+    static var SPECIAL_REQUEST = "Do you want to order as special request?"
+    static var MINIMUM_ORDER_AMOUNT = "The minimum order amount is"
+    static var CHECKOUT = "CHECKOUT"
+    static var CART_EMPTY = "Your cart is Empty"
+    static var BACK_MAIN_MENU = "Back to Main Menu"
+    static var SELECT_ADDRESS = "SELECT ADDRESS"
+    static var RES_NAME = "Restaurant Name"
+    static var RES_NUMBER = "Restaurant Number"
+    static var CHOOSE_DELIVERY_TIME = "Choose Delivery Time"
+    static var NOW = "Now"
+    static var LATER = "Later"
+    static var CREDIT_DEBIT_CARD = "Credit & Debit Card"
+    static var ADD_NEW_CARD = "ADD NEW CARD"
+    static var CASH = "Cash"
+    static var CASH_ON_DELIVERY = "Cash On Delivery"
+    static var KEEP_CASH_ON_HAND = "Please keep cash on hand"
+    static var PAY_ON_DELIVERY = "Pay On Delivery"
+    static var PAYPAL = "Paypal"
+    static var ADD_INVOICE = "Do you want invoice for this order?"
+    static var CHANGE = "CHANGE"
+    static var ORDER = "ORDER"
+    static var SELECT_TIME = "Select Time"
+    static var ENTER_COMPANY_INFO = "Please enter your company information"
+    static var PROVIDE_PAYMENT_TYPE = "Please select payment type"
+    static var SELECT_TIME_ERROR = "Please select your time"
+    static var CARD_NUMBER = "Card Number"
+    static var EXPIRY_DATE = "Expiry Date"
+    static var CVV_CODE = "Cvv Code"
+    static var MONTH = "Month"
+    static var YEAR = "Year"
+    static var PROVIDE_CARD_NO = "Provide card number"
+    static var SELECT_EXP_MONTH = "Select Expiry Month"
+    static var SELECT_EXP_YEAR = "Select Expiry Year"
+    static var PROVIDE_CVV_CODE = "Provide CVV code"
+    static var SELECT_MONTH = "Select Month"
+    static var SELECT_YEAR = "Select Year"
+    static var ORDER_SUCCESS = "Order Success"
+    static var ORDER_SUCCESS_DESC = "You will be notifies when restaurant will accept your order"
+    static var CONTINUE_SHOPPING = "Continue Shopping"
+    static var PENDING = "Pending"
+    static var IN_PREPARE = "In Prepare"
+    static var COMPLETED = "Completed"
+    static var TOTAL_AMOUNT = "TOTAL AMOUNT"
+    static var TRANSACTION_ID = "TRANSACTION ID"
+    static var ORDER_DATE = "ORDER DATE"
+    static var RATE_NOW = "Rate Now"
+    static var REPEAT_ORDER = "Repeat Order"
+    static var WANT_TO_REORDER1 = "Your old cart is from"
+    static var WANT_TO_REORDER2 = "Do you want to reorder?"
+    static var OLD_CART_FROM = "Your old cart is from"
+    static var MOBILE_NO = "Mobile No."
+    static var RES_ADDRESS = "Restaurant Address"
+    static var TYPE_OF_PAYMENT = "Type Of Payment"
+    static var ADD_ON = "Add On"
+    static var REMOVE = "Remove"
+    static var QTY = "Quantity"
+    static var SELECT_RATING_TYPE = "Please select your rating type"
+    static var ENTER_COMMENT = "Please enter your comment"
+    static var WARNING = "Warning"
+    static var ERROR = "Error"
+    static var SUCCESS = "Success"
+    static var WENT_WRONG = "Something went wrong"
+    static var VAILD_EMAIL = "Provide Valid Email Address"
+    static var PROVIDE_PASS = "Provide Password"
+    static var PROVIDE_EMAIL = "Provide Email Address"
+    static var CHECK_INTERNET = "Please check your internet connection"
+    static var PASSWORD_LENGTH_ERROR = "Password Should be 6 Character"
+    static var PROVIDE_FNAME = "Provide First Name"
+    static var PROVIDE_LNAME = "Provide Last Name"
+    static var PROVIDE_PH_NO = "Provide Phone Number"
+    static var PROVIDE_CONFIRM_PASS = "Provide Confirm Password"
+    static var CONFIRM_PASS_NOT_MATCHED = "Password and confirm password is not matched"
+    static var PROVIDE_NAME = "Provide Name"
+    static var PROVIDE_MSG = "Provide Message"
+    static var PROVIDE_BIRTHDATE = "Provide Your BirthDate"
+    static var PROVIDE_DOOR_NO = "Please Provide Door No"
+    static var PROVIDE_ADDRESS = "Please Provide Address"
+    static var PROVIDE_CITY_NAME = "Please Provide City Name"
+    static var PROVIDE_ZIP_CODE = "Please Provide Zip Code"
+    static var SELECT_COUNTRY_NAME = "Please Select Country Name"
+    static var PROVIDE_PROPER_CITY = "Please Enter Proper City Name"
+    static var PROVIDE_PROPER_ZIP = "Please Enter Proper Zip Number"
+    static var UNABLE_TO_FIND_ADD = "Unable to Find Address for Location"
+    static var ADDRESS_NOT_FOUNDED = "No Matching Addresses Found"
+    static var PROVIDE_COM_NAME = "Provide Company Name"
+    static var PROVIDE_VAT_ID = "Provide Vat Id"
+    static var PROVIDE_INVOICE = "Provide Invoice Code"
+    static var PROVIDE_OTP = "Provide OTP"
+    static var PROVIDE_TERMS_CONDITION = "Please select I agree to the terms and condition"
+    static var CANCELLED = "Cancelled"
+    static var HOW_WOULD_LIKE = "HOW WOULD YOU LIKE TO"
+    static var RECEIVE_ORDER = "RECEIVE YOUR ORDER?"
+    static var CATEGORY_ITEM_NOT_AVAILABLE = "Category item is not available"
+    static var ITEM_NOT_AVAILABLE = "Item Not Found!"
+    static var FAQ = "Frequently Asked Question"
+    static var SEE_MORE = "See More.."
+    static var TASTE = "Taste"
+    static var COOKING_LEVEL = "Cooking Level"
+    
+    static var UPGRADE_APP = "Upgrade App"
+    static var UPGRADE_MESSAGE = "Look like you have an older version of the app. Please update to get latest features and experience."
+    
+    static var GUEST_ERROR="You have to register with this app to access this feature"
+    static var DELIVERY_TIME = "Delivery Time"
+    
+    static var NOTIFICATION = "Notification"
+    static var NOTIFICATION_DETAIL = "Notification Detail"
+    
+    static var MONDAY = "MONDAY"
+    static var SUNDAY = "SUNDAY"
+    static var COLLECT_HERE = "COLLECT_HERE"
+    
+    static var BOOK_A_TABLE = "BOOK A TABLE"
+    static var ADD_A_NEW_RESERVATION = "Add a new booking"
+    static var APPROVED = "Accepted"
+    static var REJECT = "Rejected"
+    static var CANCEL_BOOKING = "Cancel Booking"
+    static var SEARCH = "Search"
+    static var ABOUT = "Details"
+    static var CHOOSE_YOUR_TIME = "Choose your time"
+    static var NUMBER_OF_GUEST = "Number of guests"
+    static var SET_BOOKING = "Set Booking"
+    static var BOOK_TABLE = "Book a table"
+    static var TABLE_BOOKING = "Table Booking"
+    static var SPACE_AVAILABLE = "Seats Available"
+    static var REJECT_TABLE_RESERVATION = "Reject Booking"
+    static var PLEASE_WRITE_REJECTION_MESSAGE = "Please write rejection message"
+    static var WRITE_YOUR_QUERY_HERE = "Write your query here"
+    static var LUNCH = "Lunch"
+    static var DINNER = "Dinner"
+    
+    static var CANCEL_RESERVATION = "Are you sure you want to cancel this reservation?"
+    static var SPECIAL_REQ = "Special Request"
+    static var WRITE_SPECIAL_REQ = "Please write special request here"
+    static var SEATS_LEFT = "seats left"
+    
+    static var BOOKINGS_NOT_FOUND = "You have not bookings"
+    static var REPLY = "Reply"
+    
+    
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>669289926430-1te7ub861054h80p15htk2bmhddme91r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.669289926430-1te7ub861054h80p15htk2bmhddme91r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC9q42j17B1KSAHZdZy0GA5mw0slUlgrZI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>669289926430</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jk.mangal</string>
+	<key>PROJECT_ID</key>
+	<string>mangal-house-customer</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mangal-house-customer.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:669289926430:ios:be8a354cbc6e9a2250c30f</string>
+</dict>
+</plist>
